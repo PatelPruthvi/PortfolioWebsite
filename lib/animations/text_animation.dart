@@ -31,8 +31,9 @@ class _AnimateTextState extends State<AnimateText> {
   void incrementalText() {
     setState(() {
       animatedText = animatedText + widget.textToAnimate[j].data![i];
+      i++;
     });
-    i++;
+
     if (animatedText == widget.textToAnimate[j].data!) {
       i = 0;
       j = (j + 1) % widget.textToAnimate.length;
@@ -46,6 +47,7 @@ class _AnimateTextState extends State<AnimateText> {
     setState(() {
       animatedText = animatedText.substring(0, animatedText.length - 1);
     });
+
     if (animatedText.isEmpty) {
       Future.delayed(widget.pauseDuration).then((value) => incrementalText());
     } else {
@@ -59,13 +61,16 @@ class _AnimateTextState extends State<AnimateText> {
         setState(() {
           cursor = widget.cursor;
         });
+
         cursorChange();
       });
     } else {
       Future.delayed(widget.speed).then((value) {
-        setState(() {
-          cursor = '';
-        });
+        if (mounted) {
+          setState(() {
+            cursor = '';
+          });
+        }
         cursorChange();
       });
     }
@@ -73,10 +78,9 @@ class _AnimateTextState extends State<AnimateText> {
 
   @override
   void initState() {
-    cursorGetter();
     incrementalText();
     cursorChange();
-
+    cursorGetter();
     super.initState();
   }
 
@@ -85,4 +89,8 @@ class _AnimateTextState extends State<AnimateText> {
     return Text('$animatedText $cursor',
         style: widget.animatedTextStyle ?? const TextStyle());
   }
+}
+
+Text getAnimatedText(BuildContext context) {
+  return Text("");
 }

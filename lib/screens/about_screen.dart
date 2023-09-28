@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider_try_2_animation/widgets/socials_widget.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class AboutPage extends StatefulWidget {
   const AboutPage({super.key});
@@ -21,6 +22,7 @@ class _AboutPageState extends State<AboutPage> {
       child: Container(
         color: Colors.black,
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+          SizedBox(height: MediaQuery.of(context).size.height * 0.1),
           Center(child: titleText(context, 'ABOUT ME')),
           SizedBox(height: MediaQuery.of(context).size.height * 0.05),
           Row(children: [
@@ -68,7 +70,9 @@ class _AboutPageState extends State<AboutPage> {
                         textAlign: TextAlign.justify),
                     SizedBox(height: MediaQuery.of(context).size.height * 0.05),
                     ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        launchUrl(Uri.parse(resumeLink));
+                      },
                       style: ButtonStyle(
                           backgroundColor:
                               const MaterialStatePropertyAll(Colors.black),

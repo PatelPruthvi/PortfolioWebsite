@@ -3,4 +3,5 @@ class Routes {
   final String aboutRoute = '/about';
   final String contactRoute = '/contact';
   final String skillsRoute = '/skills';
+  final String projectsRoute = '/projects';
 }

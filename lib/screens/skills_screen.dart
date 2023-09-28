@@ -25,7 +25,7 @@ class _SkillsPageState extends State<SkillsPage> {
         color: Colors.black,
         child: Column(
           children: [
-            SizedBox(height: MediaQuery.of(context).size.height * 0.025),
+            SizedBox(height: MediaQuery.of(context).size.height * 0.1),
             Center(child: titleText(context, "SKILLS")),
             SizedBox(height: MediaQuery.of(context).size.height * 0.05),
             Row(children: [

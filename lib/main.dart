@@ -1,6 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:provider_try_2_animation/screens/home_screen.dart';
+import 'package:provider_try_2_animation/screens/app_screen.dart';
 
 void main() {
   runApp(const MyApp());

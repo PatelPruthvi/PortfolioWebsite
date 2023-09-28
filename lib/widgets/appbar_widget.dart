@@ -1,9 +1,9 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
-import 'package:animated_button/animated_button.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:scroll_to_id/scroll_to_id.dart';
 
-Widget stickyAppBar(BuildContext context) {
+Widget stickyAppBar(BuildContext context, ScrollToId scrollToId) {
   return Container(
       color: Colors.black,
       height: MediaQuery.of(context).size.height * 0.1,
@@ -18,11 +18,11 @@ Widget stickyAppBar(BuildContext context) {
                 fontSize: MediaQuery.of(context).size.width * 0.02,
                 fontFamily: GoogleFonts.aBeeZee().fontFamily),
           )),
-          appbarItem(context, "Home"),
-          appbarItem(context, "About"),
-          appbarItem(context, "Skills"),
-          appbarItem(context, "Projects"),
-          appbarItem(context, "Contact"),
+          appbarItem(context, "Home", "a", scrollToId),
+          appbarItem(context, "About", "b", scrollToId),
+          appbarItem(context, "Skills", "c", scrollToId),
+          appbarItem(context, "Projects", "d", scrollToId),
+          appbarItem(context, "Contact", "e", scrollToId),
           SizedBox(
             width: MediaQuery.of(context).size.width * 0.05,
           )
@@ -30,27 +30,18 @@ Widget stickyAppBar(BuildContext context) {
       ));
 }
 
-Widget appbarItem(BuildContext context, String text) {
-  bool entered = false;
-  return MouseRegion(
-    onEnter: (event) {
-      entered = true;
-    },
-    onExit: (event) {
-      entered = false;
-    },
-    child: AnimatedButton(
-        onPressed: () {},
-        shadowDegree: ShadowDegree.light,
-        height: MediaQuery.of(context).size.height * 0.08,
-        width: MediaQuery.of(context).size.width * 0.07,
-        color: Colors.transparent,
-        child: Text(
-          text,
-          style: TextStyle(
-              color: entered == true ? Colors.blue.shade600 : Colors.white,
-              fontSize: MediaQuery.of(context).size.width * 0.015,
-              fontFamily: GoogleFonts.aBeeZee().fontFamily),
-        )),
-  );
+Widget appbarItem(BuildContext context, String text, String navigateId,
+    ScrollToId scrollToId) {
+  return TextButton(
+      onPressed: () {
+        scrollToId.animateTo(navigateId,
+            duration: Duration(seconds: 1), curve: Curves.linear);
+      },
+      child: Text(
+        text,
+        style: TextStyle(
+            color: Colors.white,
+            fontSize: MediaQuery.of(context).size.width * 0.015,
+            fontFamily: GoogleFonts.aBeeZee().fontFamily),
+      ));
 }

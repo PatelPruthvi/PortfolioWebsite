@@ -23,13 +23,13 @@ List<String> techs = [
   'Github'
 ];
 
-List<String> projectImagesPath = [
-  'images/projects/portfolio_ss.png',
-  'images/projects/interactify_t.png',
-  'images/projects/attendagram.png',
-  'images/projects/grocery_app.png',
-  'images/projects/book_bucket.png',
-  'images/projects/cricbuzz.png'
+List<List<String>> projectImagesPath = [
+  ['images/projects/portfolio_ss.png'],
+  ['images/projects/interactify_t.png', 'images/projects/interactify_2.png'],
+  ['images/projects/attendagram.png', 'images/projects/attendagram_2.png'],
+  ['images/projects/grocery_app.png', 'images/projects/grocery_app_2.png'],
+  ['images/projects/book_bucket.png', 'images/projects/book_bucket_2.png'],
+  ['images/projects/cricbuzz.png', 'images/projects/cricbuzz_2.png']
 ];
 List<String> projectTitles = [
   'Portfolio Website',
@@ -59,7 +59,7 @@ List<String> projectDesc = [
 ];
 
 List<String> projectLinks = [
-  '',
+  'https://github.com/PatelPruthvi/PortfolioWebsite',
   'https://github.com/PatelPruthvi/interactify',
   'https://github.com/PatelPruthvi/AttendaGram_firestore',
   'https://github.com/PatelPruthvi/grocery_app_bloc',
