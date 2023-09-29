@@ -17,6 +17,7 @@ class _HomePageMobileState extends State<HomePageMobile> {
     return Stack(children: [
       SizedBox(
           height: MediaQuery.of(context).size.height,
+          width: MediaQuery.of(context).size.width,
           child: bgAnimationMobile(context)),
       Padding(
         padding:
