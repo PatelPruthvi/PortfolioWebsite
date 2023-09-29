@@ -15,7 +15,7 @@ class _AboutScreenMobileState extends State<AboutScreenMobile> {
   Widget build(BuildContext context) {
     final aboutTextStyle = TextStyle(
         color: Colors.white,
-        fontSize: MediaQuery.of(context).size.height * 0.03,
+        fontSize: MediaQuery.of(context).size.width * 0.03,
         fontFamily: GoogleFonts.aBeeZee().fontFamily);
     return SingleChildScrollView(
       scrollDirection: Axis.vertical,

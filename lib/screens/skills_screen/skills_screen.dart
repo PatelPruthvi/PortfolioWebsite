@@ -16,8 +16,9 @@ class _SkillsPageState extends State<SkillsPage> {
   Widget build(BuildContext context) {
     final aboutTextStyle = TextStyle(
         color: Colors.white,
-        fontSize: MediaQuery.of(context).size.height * 0.03,
+        fontSize: MediaQuery.of(context).size.shortestSide * 0.03,
         fontFamily: GoogleFonts.aBeeZee().fontFamily);
+
     return SingleChildScrollView(
       scrollDirection: Axis.vertical,
       child: Container(
