@@ -35,7 +35,7 @@ class _AboutPageState extends State<AboutPage> {
                       borderRadius: BorderRadius.circular(
                           MediaQuery.of(context).size.width * 0.075)),
                   image: const DecorationImage(
-                      image: AssetImage('images/socials/dp.png'),
+                      image: AssetImage('images/socials/profilephoto.png'),
                       fit: BoxFit.cover)),
             ),
             SizedBox(width: MediaQuery.of(context).size.width * 0.025),
