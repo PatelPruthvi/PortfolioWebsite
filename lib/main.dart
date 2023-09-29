@@ -1,6 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:provider_try_2_animation/screens/app_screen.dart';
+import 'package:provider_try_2_animation/screens/all_screens/current_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,6 +17,6 @@ class MyApp extends StatelessWidget {
           dragDevices: {PointerDeviceKind.mouse, PointerDeviceKind.touch},
         ),
         debugShowCheckedModeBanner: false,
-        home: HomeScreen());
+        home: const CurrentScreen());
   }
 }

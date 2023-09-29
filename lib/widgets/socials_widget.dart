@@ -11,7 +11,7 @@ const String resumePortfolioLink = 'https://patelpruthvi.github.io';
 const String resumeLink =
     'https://drive.google.com/file/d/1OYp5kOfOVByx1NUHg-GUWnIIDraPVCRt/view?usp=sharing';
 Widget onSocialClicked(
-    BuildContext context, String socialUrl, String assetPath) {
+    BuildContext context, String socialUrl, String assetPath, double height) {
   return ElevatedButton(
       style: const ButtonStyle(
           elevation: MaterialStatePropertyAll(0),
@@ -24,6 +24,24 @@ Widget onSocialClicked(
         height: MediaQuery.of(context).size.height * 0.05,
         width: MediaQuery.of(context).size.height * 0.05,
         fit: BoxFit.contain,
+      ));
+}
+
+Widget onSocialsClickedMobile(
+    BuildContext context, String socialUrl, String assetPath) {
+  return ElevatedButton(
+      style: const ButtonStyle(
+          elevation: MaterialStatePropertyAll(0),
+          backgroundColor: MaterialStatePropertyAll(Colors.transparent)),
+      onPressed: () async {
+        await launchUrl(Uri.tryParse(socialUrl)!);
+      },
+      child: AspectRatio(
+        aspectRatio: 0.25 * 16 / 9,
+        child: Image.asset(
+          assetPath,
+          fit: BoxFit.contain,
+        ),
       ));
 }
 
@@ -49,7 +67,7 @@ Widget titleText(BuildContext context, String title) {
 }
 
 TextFormField textFieldModel(String hintText, TextEditingController controller,
-    int maxLines, String fieldName) {
+    int maxLines, String fieldName, TextStyle textStyle) {
   return TextFormField(
     validator: (value) {
       if (value == null || value.isEmpty) {
@@ -61,8 +79,7 @@ TextFormField textFieldModel(String hintText, TextEditingController controller,
     },
     controller: controller,
     maxLines: maxLines,
-    style: TextStyle(
-        color: Colors.white, fontFamily: GoogleFonts.aBeeZee().fontFamily),
+    style: textStyle,
     decoration: InputDecoration(
         hintText: hintText,
         hintStyle: TextStyle(

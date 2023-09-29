@@ -35,7 +35,8 @@ class _HomePageState extends State<HomePage> {
                           color: Colors.white,
                           fontSize: MediaQuery.of(context).size.width * 0.02,
                           fontFamily: GoogleFonts.aBeeZee().fontFamily)),
-                  hiAnimation(context),
+                  hiAnimation(
+                      context, MediaQuery.of(context).size.width * 0.04),
                   Text(', I am',
                       style: TextStyle(
                           color: Colors.white,
@@ -63,23 +64,34 @@ class _HomePageState extends State<HomePage> {
                         Text("Computer Engineering Student."),
                         Text("Flutter Developer.")
                       ])),
-              SizedBox(height: MediaQuery.of(context).size.height * 0.07),
+              // SizedBox(height: MediaQuery.of(context).size.height * 0.05),
               SizedBox(
                 width: MediaQuery.of(context).size.width * 0.6,
+                height: MediaQuery.of(context).size.width * 0.1,
                 child: Row(children: [
-                  onSocialClicked(context, 'https://github.com/PatelPruthvi',
-                      'images/socials/github_icon.png'),
+                  onSocialClicked(
+                      context,
+                      'https://github.com/PatelPruthvi',
+                      'images/socials/github_icon.png',
+                      MediaQuery.of(context).size.height * 0.03),
                   SizedBox(width: MediaQuery.of(context).size.width * 0.01),
                   onSocialClicked(
                       context,
                       'https://linkedin.com/in/-patelpruthvi-',
-                      'images/socials/linked_in.png'),
+                      'images/socials/linked_in.png',
+                      MediaQuery.of(context).size.height * 0.03),
                   SizedBox(width: MediaQuery.of(context).size.width * 0.01),
-                  onSocialClicked(context, "https://leetcode.com/pruthvikp8613",
-                      'images/socials/leetcode_icon.png'),
+                  onSocialClicked(
+                      context,
+                      "https://leetcode.com/pruthvikp8613",
+                      'images/socials/leetcode_icon.png',
+                      MediaQuery.of(context).size.height * 0.03),
                   SizedBox(width: MediaQuery.of(context).size.width * 0.01),
-                  onSocialClicked(context, "https://twitter.com/_patelpruthvi_",
-                      'images/socials/twitter_icon.png'),
+                  onSocialClicked(
+                      context,
+                      "https://twitter.com/_patelpruthvi_",
+                      'images/socials/twitter_icon.png',
+                      MediaQuery.of(context).size.height * 0.03),
                 ]),
               ),
             ]),

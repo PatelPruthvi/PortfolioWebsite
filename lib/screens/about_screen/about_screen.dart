@@ -69,38 +69,21 @@ class _AboutPageState extends State<AboutPage> {
                         style: aboutTextStyle,
                         textAlign: TextAlign.justify),
                     SizedBox(height: MediaQuery.of(context).size.height * 0.05),
-                    ElevatedButton(
-                      onPressed: () {
-                        launchUrl(Uri.parse(resumeLink));
-                      },
-                      style: ButtonStyle(
-                          backgroundColor:
-                              const MaterialStatePropertyAll(Colors.black),
-                          shape: MaterialStatePropertyAll(
-                              RoundedRectangleBorder(
-                                  side: BorderSide(color: Colors.blue.shade600),
-                                  borderRadius: BorderRadius.circular(10)))),
-                      child: SizedBox(
-                        width: MediaQuery.of(context).size.width * 0.12,
-                        height: MediaQuery.of(context).size.height * 0.05,
-                        child: Row(
-                          children: [
-                            Expanded(
-                                child: Text('Resume',
-                                    style: TextStyle(
-                                        color: Colors.blue.shade600,
-                                        fontWeight: FontWeight.bold,
-                                        fontSize:
-                                            MediaQuery.of(context).size.width *
-                                                0.02,
-                                        fontFamily:
-                                            GoogleFonts.aBeeZee().fontFamily))),
-                            Icon(Icons.download_outlined,
-                                color: Colors.blue.shade600)
-                          ],
+                    TextButton.icon(
+                        style: ButtonStyle(
+                            backgroundColor:
+                                MaterialStatePropertyAll(Colors.blue.shade600)),
+                        onPressed: () {
+                          launchUrl(Uri.parse(resumeLink));
+                        },
+                        icon: Icon(
+                          Icons.download,
+                          color: Colors.white,
                         ),
-                      ),
-                    )
+                        label: Text(
+                          "Resume",
+                          style: aboutTextStyle,
+                        )),
                   ]),
             ),
             SizedBox(width: MediaQuery.of(context).size.width * 0.05)
