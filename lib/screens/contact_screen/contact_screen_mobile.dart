@@ -62,7 +62,6 @@ class _ContactScreenMobileState extends State<ContactScreenMobile> {
     return SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: Container(
-            // height: MediaQuery.of(context).size.height * 1.2,
             color: Colors.black,
             child: Padding(
               padding: const EdgeInsets.all(12.0),

@@ -71,7 +71,7 @@ TextFormField textFieldModel(String hintText, TextEditingController controller,
   return TextFormField(
     validator: (value) {
       if (value == null || value.isEmpty) {
-        return "$fieldName can not be empy";
+        return "$fieldName can not be empty";
       } else if (fieldName == "E-Mail" &&
           (!value.contains("@") || !value.contains("."))) {
         return "Invalid format for E-Mail";

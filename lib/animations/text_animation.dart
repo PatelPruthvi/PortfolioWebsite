@@ -92,5 +92,5 @@ class _AnimateTextState extends State<AnimateText> {
 }
 
 Text getAnimatedText(BuildContext context) {
-  return Text("");
+  return const Text("");
 }
