@@ -1,11 +1,11 @@
 {
-    "name": "provider_try_2_animation",
-    "short_name": "provider_try_2_animation",
+    "name": "Pruthvi's Portfolio",
+    "short_name": "Pruthvi's Portfolio",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "description": "Flutter enthusiast with a knack for web development – showcasing my skills, projects, resume, and contact info in one sleek portfolio!",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
