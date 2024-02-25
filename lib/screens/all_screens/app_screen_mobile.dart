@@ -42,7 +42,8 @@ class _HomeScreenMobileState extends State<HomeScreenMobile> {
                 onTap: () {
                   Navigator.pop(context);
                   scrollToId?.animateTo('a',
-                      duration: Duration(seconds: 1), curve: Curves.easeIn);
+                      duration: const Duration(seconds: 1),
+                      curve: Curves.easeIn);
                 },
                 child: Text("Home", style: drawerItemTextStyle)),
             const Divider(color: Colors.white),
@@ -50,7 +51,8 @@ class _HomeScreenMobileState extends State<HomeScreenMobile> {
                 onTap: () {
                   Navigator.pop(context);
                   scrollToId?.animateTo('b',
-                      duration: Duration(seconds: 1), curve: Curves.easeIn);
+                      duration: const Duration(seconds: 1),
+                      curve: Curves.easeIn);
                 },
                 child: Text("About", style: drawerItemTextStyle)),
             const Divider(color: Colors.white),
@@ -58,7 +60,7 @@ class _HomeScreenMobileState extends State<HomeScreenMobile> {
               onTap: () {
                 Navigator.pop(context);
                 scrollToId?.animateTo('c',
-                    duration: Duration(seconds: 1), curve: Curves.easeIn);
+                    duration: const Duration(seconds: 1), curve: Curves.easeIn);
               },
               child: RichText(
                 text: TextSpan(children: [
@@ -75,7 +77,8 @@ class _HomeScreenMobileState extends State<HomeScreenMobile> {
                 onTap: () {
                   Navigator.pop(context);
                   scrollToId?.animateTo('d',
-                      duration: Duration(seconds: 1), curve: Curves.easeIn);
+                      duration: const Duration(seconds: 1),
+                      curve: Curves.easeIn);
                 },
                 child: Text("Projects", style: drawerItemTextStyle)),
             const Divider(color: Colors.white),
@@ -83,7 +86,8 @@ class _HomeScreenMobileState extends State<HomeScreenMobile> {
                 onTap: () {
                   Navigator.pop(context);
                   scrollToId?.animateTo('e',
-                      duration: Duration(seconds: 1), curve: Curves.easeIn);
+                      duration: const Duration(seconds: 1),
+                      curve: Curves.easeIn);
                 },
                 child: Text("Contact", style: drawerItemTextStyle)),
             const Divider(color: Colors.white),
@@ -96,7 +100,7 @@ class _HomeScreenMobileState extends State<HomeScreenMobile> {
         title: GestureDetector(
           onTap: () {
             scrollToId?.animateTo('a',
-                duration: Duration(seconds: 1), curve: Curves.easeIn);
+                duration: const Duration(seconds: 1), curve: Curves.easeIn);
           },
           child: Text(
             "   Pruthvi",

@@ -127,17 +127,21 @@ class ProjectTileMobile extends StatelessWidget {
                             ),
                           ],
                         ),
-                        TextButton(
-                            style: ButtonStyle(
-                                backgroundColor: MaterialStatePropertyAll(
-                                    Colors.blue.shade600)),
-                            onPressed: () {
-                              navigateToGithub(context, projectLinks[index]);
-                            },
-                            child: Text(
-                              "Source Code",
-                              style: aboutTextStyle,
-                            ))
+                        projectLinks[index] != ''
+                            ? TextButton(
+                                style: ButtonStyle(
+                                    backgroundColor: MaterialStatePropertyAll(
+                                        Colors.blue.shade600)),
+                                onPressed: () {
+                                  navigateToGithub(
+                                      context, projectLinks[index]);
+                                },
+                                child: Text(
+                                  "Source Code",
+                                  style: aboutTextStyle,
+                                ))
+                            : Text("Coming Soon...(Google Play)",
+                                style: aboutTextStyle)
                       ]),
                 ),
               ],
@@ -229,17 +233,20 @@ class ProjectListTile extends StatelessWidget {
                           ),
                         ],
                       ),
-                      TextButton(
-                          style: ButtonStyle(
-                              backgroundColor: MaterialStatePropertyAll(
-                                  Colors.blue.shade600)),
-                          onPressed: () {
-                            navigateToGithub(context, projectLinks[index]);
-                          },
-                          child: Text(
-                            "Source Code",
-                            style: aboutTextStyle,
-                          ))
+                      projectLinks[index] != ''
+                          ? TextButton(
+                              style: ButtonStyle(
+                                  backgroundColor: MaterialStatePropertyAll(
+                                      Colors.blue.shade600)),
+                              onPressed: () {
+                                navigateToGithub(context, projectLinks[index]);
+                              },
+                              child: Text(
+                                "Source Code",
+                                style: aboutTextStyle,
+                              ))
+                          : Text("Coming Soon...(Google Play)",
+                              style: aboutTextStyle)
                     ]),
               ),
               SizedBox(width: MediaQuery.of(context).size.width * 0.01)

@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -9,7 +10,7 @@ const String pvtKeyForContact = 'W8GJ73a-y9gzeSGPS4W83';
 const String mailAddress = 'pruthvikp8613@gmail.com';
 const String resumePortfolioLink = 'https://patelpruthvi.github.io';
 const String resumeLink =
-    'https://drive.google.com/file/d/1OYp5kOfOVByx1NUHg-GUWnIIDraPVCRt/view?usp=sharing';
+    'https://drive.google.com/file/d/1Zl_hAFFUddKJS_nKJWADitxWu5um0UFW/view?usp=share_link';
 Widget onSocialClicked(
     BuildContext context, String socialUrl, String assetPath, double height) {
   return ElevatedButton(
@@ -50,7 +51,9 @@ void navigateToGithub(BuildContext context, String url) async {
   try {
     await launchUrl(uri);
   } on Exception catch (e) {
-    print(e.toString());
+    if (kDebugMode) {
+      print(e.toString());
+    }
   }
 }
 
@@ -76,6 +79,7 @@ TextFormField textFieldModel(String hintText, TextEditingController controller,
           (!value.contains("@") || !value.contains("."))) {
         return "Invalid format for E-Mail";
       }
+      return null;
     },
     controller: controller,
     maxLines: maxLines,

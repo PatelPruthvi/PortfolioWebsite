@@ -76,7 +76,7 @@ class _AboutPageState extends State<AboutPage> {
                         onPressed: () {
                           launchUrl(Uri.parse(resumeLink));
                         },
-                        icon: Icon(
+                        icon: const Icon(
                           Icons.download,
                           color: Colors.white,
                         ),

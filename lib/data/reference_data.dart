@@ -25,6 +25,7 @@ List<String> techs = [
 
 List<List<String>> projectImagesPath = [
   ['images/projects/portfolio_ss.png'],
+  ['images/projects/task_planner_a.png', 'images/projects/task_planner_b.png'],
   ['images/projects/interactify_t.png', 'images/projects/interactify_2.png'],
   ['images/projects/attendagram.png', 'images/projects/attendagram_2.png'],
   ['images/projects/grocery_app.png', 'images/projects/grocery_app_2.png'],
@@ -33,6 +34,7 @@ List<List<String>> projectImagesPath = [
 ];
 List<String> projectTitles = [
   'Portfolio Website',
+  'Task Planner',
   'Interactify',
   'Attendagram',
   'Grocery App',
@@ -42,6 +44,7 @@ List<String> projectTitles = [
 
 List<String> projectTech = [
   'Flutter',
+  'Flutter | SQLite | BLoC',
   'Flutter | BLoC | Firebase | Cloud Firestore',
   'Flutter | Firebase | Cloud Firestore',
   'Flutter | BLoC',
@@ -51,6 +54,7 @@ List<String> projectTech = [
 
 List<String> projectDesc = [
   '🚀 Crafting digital experiences that inspire and innovate. Explore my journey through code and design. ✨',
+  '"🚀 Stay on top of your tasks effortlessly with our intuitive task planner app! Organize, prioritize, and conquer your day with ease. 📅✅',
   'Capture, share, and connect with the world. Visual stories, one\'s way. 📸🌍 #InstaClone',
   'Streamline attendance tracking effortlessly. Simplify record-keeping for a seamless experience.',
   'Mastering BLoC concepts one cart at a time. Explore grocery app journey in 3 pages. 🛒📚',
@@ -60,6 +64,7 @@ List<String> projectDesc = [
 
 List<String> projectLinks = [
   'https://github.com/PatelPruthvi/PortfolioWebsite',
+  '',
   'https://github.com/PatelPruthvi/interactify',
   'https://github.com/PatelPruthvi/AttendaGram_firestore',
   'https://github.com/PatelPruthvi/grocery_app_bloc',

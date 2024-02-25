@@ -53,7 +53,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         child: GestureDetector(
                           onTap: () {
                             scrollToId?.animateTo('a',
-                                duration: Duration(seconds: 1),
+                                duration: const Duration(seconds: 1),
                                 curve: Curves.easeIn);
                           },
                           child: Text(
