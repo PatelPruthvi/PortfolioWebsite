@@ -10,7 +10,9 @@ const String pvtKeyForContact = 'W8GJ73a-y9gzeSGPS4W83';
 const String mailAddress = 'pruthvikp8613@gmail.com';
 const String resumePortfolioLink = 'https://patelpruthvi.github.io';
 const String resumeLink =
-    'https://drive.google.com/file/d/1Zl_hAFFUddKJS_nKJWADitxWu5um0UFW/view?usp=share_link';
+    'https://drive.google.com/drive/folders/10SOsmKXaLXGLLHdCJPpDmNoT1I7HLYpL?usp=share_link';
+const String taskPlannerLink =
+    'https://play.google.com/store/apps/details?id=com.agevole.taskplanner';
 Widget onSocialClicked(
     BuildContext context, String socialUrl, String assetPath, double height) {
   return ElevatedButton(

@@ -140,8 +140,12 @@ class ProjectTileMobile extends StatelessWidget {
                                   "Source Code",
                                   style: aboutTextStyle,
                                 ))
-                            : Text("Coming Soon...(Google Play)",
-                                style: aboutTextStyle)
+                            : TextButton(
+                                onPressed: () {
+                                  navigateToGithub(context, taskPlannerLink);
+                                },
+                                child:
+                                    Text("Google Play", style: aboutTextStyle))
                       ]),
                 ),
               ],
@@ -245,8 +249,15 @@ class ProjectListTile extends StatelessWidget {
                                 "Source Code",
                                 style: aboutTextStyle,
                               ))
-                          : Text("Coming Soon...(Google Play)",
-                              style: aboutTextStyle)
+                          : TextButton(
+                              style: const ButtonStyle(
+                                side: WidgetStatePropertyAll(
+                                    BorderSide(width: 2, color: Colors.white)),
+                              ),
+                              onPressed: () {
+                                navigateToGithub(context, taskPlannerLink);
+                              },
+                              child: Text("Google Play", style: aboutTextStyle))
                     ]),
               ),
               SizedBox(width: MediaQuery.of(context).size.width * 0.01)

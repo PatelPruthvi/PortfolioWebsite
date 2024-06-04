@@ -3,6 +3,7 @@
 import 'package:emailjs/emailjs.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider_try_2_animation/widgets/socials_widget.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -36,6 +37,9 @@ class _ContactPageState extends State<ContactPage> {
           privateKey: pvtKeyForContact,
         ),
       );
+      Fluttertoast.showToast(
+          timeInSecForIosWeb: 5,
+          msg: 'Thanks for reaching out to me. Hope you have a great day');
       nameC.clear();
       mailC.clear();
       messageC.clear();
